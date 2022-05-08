@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id:  05082022-1
+      author:  YC
+      changes:
+        -  createTable:
+             catalogName:  bookshop_db
+             columns:
+               -  column:
+                    name:  id
+                    type:  bigint
+                    autoIncrement: true
+                    constraints:
+                      - primaryKey: true
+                      - nullable: false
+               -  column:
+                    name:  code
+                    type:  varchar(100)
+               -  column:
+                    name:  title
+                    type:  varchar(100)
+               -  column:
+                    name:  author
+                    type:  varchar(50)
+               -  column:
+                    name:  overview
+                    type:  longtext
+               -  column:
+                    name:  price
+                    type:  double
+             tableName:  books
